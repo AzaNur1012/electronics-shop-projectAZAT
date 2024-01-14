@@ -36,8 +36,8 @@ class Item:
             self.__name = new_name
 
     @classmethod
-    def instantiate_from_csv(cls):
-        with open('src/items.csv', newline='') as file:
+    def instantiate_from_csv(cls, filename='../src/items.csv'):
+        with open(filename) as file:
                 reader = csv.DictReader(file)
                 for row in reader:
                     print(row)
